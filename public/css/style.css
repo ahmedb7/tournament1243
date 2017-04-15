@@ -1,0 +1,123 @@
+/* Created by Hensi und Timä */
+
+/** Fonts **/
+@font-face {
+    font-family: 'Questrial';
+    src: local('Questrial');
+    url('Questrial-Regular.ttf');
+}
+
+/** Element **/
+html, body {
+    background-color: #F1F1F1;
+    font-family: 'Questrial', sans-serif;
+}
+
+/** IDs **/
+#tempTournament {
+    border:1px solid black;
+    padding:20px;
+    margin:25px 0;
+}
+
+#topHeader {
+    color: #444444;
+    background-color: #2F2F2F;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+/** Classes **/
+.navbar-default a {
+    color: #FFFFFF !important;
+}
+
+.container {
+    padding-top: 50px;
+    width: 90%;
+}
+.tournament {
+    border:1px solid black;
+    padding:20px;
+    margin:25px 0;
+}
+.navbar-default {
+    background-image: none;
+    background-color: #2F2F2F;
+    box-shadow: none;
+}
+.navbar-default .container-fluid {
+    padding-left: 0px;
+}
+.navbar-default a {
+    color: #FFFFFF !important;
+}
+
+.factionLeft {
+    float: left;
+    width: 40%;
+}
+
+.factionRight {
+    float: left;
+    width: 40%;
+}
+
+.factionLeft p, .factionRight p {
+    background-color: #adadad;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 7px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tempTournamentDescription {
+}
+
+.tournamentDescription {
+    width: 40%;
+    float: left;
+}
+
+.tournamentField {
+    width: 40%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/** Media Queries **/
+@media screen and (min-width: 768px){
+    .navbar-brand { display: none !important; }
+    .header { display: block; }
+    .panelLeft { min-height: 700px; }
+    .panelRightUp { min-height: 100px; }
+    .panelRightDown {  min-height: 580px; }
+}
+
+@media all and (max-width: 767px){
+    #header { margin: 0; }
+    .navbar { margin: 0; }
+    .navbar-default { margin: 0px; }
+    .panelLeft { width: 100%; padding: 0px; margin: 0px; }
+    .container { width: 100%; padding: 0px; }
+    .panelRightUp {
+        margin: 2.5%;
+        float: left;
+        width: 45%;
+    }
+    .panelRightDown {
+        margin: 2.5%;
+        float: left;
+        width: 45%;
+    }
+    .clear {
+        clear: both;
+    }
+}

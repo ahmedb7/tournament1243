@@ -1,0 +1,34 @@
+<div class="tournament">
+    <div class="tournamentDescription">
+        <h3>Tunier Spezifikationen</h3>
+        <label>Tuniername:</label>
+        <p>{{viewTournament.title}}</p>
+        <label>Tunierspiel:</label>
+        <p>{{viewTournament.game}}</p>
+        <label>Tunierbeschreibung:</label>
+        <p>{{viewTournament.description}}</p>
+        <label>Startdatum:</label>
+        <p>{{viewTournament.date}}</p>
+        <label>Preis:</label>
+        <p>{{viewTournament.price}}</p>
+        <label>Organisator:</label>
+        <p>{{viewTournament.organisator.name}}</p>
+    </div>
+    <div class="tournamentField">
+        <h3>Tunier Übersicht</h3>
+        <div ng-repeat="team in allTeams" ng-if="$scope.viewTournament.tournamenttype != 'team'">
+            <div class="factionRound1">
+                <p>{{team.name}}</p>
+            </div>
+        </div>
+        <div ng-repeat="participant in allParticipants" ng-if="$scope.viewTournament.tournamenttype != 'single'">
+            <div class="factionRound1">
+                <p>{{participant.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div ng-repeat="participant in allParticipant" ng-if="$scope.viewTournament.tournamenttype != 'single'">
+        <p>{{participant.name}}</p>
+    </div>
+    <div class="clear"></div>
+</div>

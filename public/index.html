@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EGSwiss - Tuniere</title>
+
+    <meta charset="utf-8">
+
+    <meta name="description" content="EGSwiss tournament is a application where you configure own tournaments. From gamers for gamers." />
+    <meta name="keywords" content="swiss, switzerland, schweiz, gaming, games, deutsch, community, group, game, teamspeak, team, tournament, tunier" />
+    <meta name="author" content="EGSwiss">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+
+    <link rel="stylesheet" type="text/css" href="./lib/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/Toastr/toastr.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body ng-app="egswiss_tournament" ng-controller="MainController">
+
+    <div id="topHeader">
+        <a href="http://forum.egswiss.ch">Anmelden</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="headerLogo">
+                <img src="images/egsLogo.png">
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="tournament">Tournaments</a></li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <ui-view></ui-view>
+            <!--
+            <div>
+                <div class="tournament addTournament">
+                    <add-tournament add-tournament="addTournament"></add-tournament>
+                </div>
+                <div class="tournament editTournament">
+                    <edit-tournament edit-tournament="editTournament"></edit-tournament>
+                </div>
+                <div class="tournament viewTournament">
+                    <view-tournament view-tournament="viewTournament"></view-tournament>
+                </div>
+            </div>
+                -->
+        </div>
+    </div>
+
+    <div id="scripts">
+        <!-- Libraries -->
+        <script src="./lib/jQuery/jquery-1.11.3.min.js"></script>
+        <script src="./lib/Angularjs/angular/angular.min.js"></script>
+        <script src="./lib/Angularjs/uiRoute/angular-ui-router.js"></script>
+        <script src="./lib/Underscore/underscore.js"></script>
+        <script src="./lib/Bootstrap/js/bootstrap.min.js"></script>
+        <script src="./lib/Toastr/toastr.js"></script>
+
+        <!-- Angular Files -->
+        <script src="./js/app.js"></script>
+        <script src="./js/config.js"></script>
+
+        <!-- Module Files -->
+        <script src="./js/Direktives/directive.js"></script>
+        <script src="./js/Controller/controller.js"></script>
+
+        <!-- Angular Component Files -->
+        <script src="./js/Direktives/addTournamentDirective/addTournamentDirective.js"></script>
+        <script src="./js/Controller/addTournamentController/addTournamentController.js"></script>
+
+        <script src="./js/Direktives/editTournamentDirective/editTournamentDirective.js"></script>
+        <script src="./js/Controller/editTournamentController/editTournamentController.js"></script>
+
+        <script src="./js/Direktives/viewTournamentDirective/viewTournamentDirecitve.js"></script>
+        <script src="./js/Controller/viewTournamentController/viewTournamentController.js"></script>
+
+    </div>
+</body>
+</html>

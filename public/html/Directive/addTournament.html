@@ -1,0 +1,43 @@
+<div>
+    <button ng-click="createTournament()">Create</button>
+</div>
+
+<div id="tempTournament" ng-show="isVisible" >
+
+    <h1>Create Tournament</h1>
+
+    <div class="tempTournamentDescription">
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Turniername</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.title">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Spiel</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.game">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Beschreibung</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.description">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Startdatum</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.startdate">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Enddatum</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.enddate">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Preis</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.price">
+        </div>
+        <div class="row">
+            <label class="col-md-4 col-sm-3">Organisator</label>
+            <input class="col-md-7 col-sm-8" ng-model="addTournament.organisator">
+        </div>
+    </div>
+
+    <button ng-click="save()">save Tournament</button>
+    <button ng-click="cancelCreateTournament()">cancel Tournament</button>
+
+</div>
